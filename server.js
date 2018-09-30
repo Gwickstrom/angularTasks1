@@ -19,6 +19,9 @@ app.use(helmet())
 
 require('./server/config/database');
 
+// for Angular
+app.use(express.static( __dirname + '/angularTasks/dist' ));
+
 // routes
 app.use('/tasks', require('./server/config/routes/task.routes'));
 
